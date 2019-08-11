@@ -28,7 +28,7 @@ public class User {
     private LocalDate birthDate;
 
     @Email(message = "Email should be valid")
-    @NotEmpty
+    @NotBlank
     @Column(name = "email", nullable = false)
     private String email;
 

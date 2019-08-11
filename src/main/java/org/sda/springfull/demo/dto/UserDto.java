@@ -4,6 +4,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 import java.time.LocalDate;
 
 public class UserDto {
@@ -13,6 +14,10 @@ public class UserDto {
     @NotEmpty
     private String firstName;
 
+    /*
+    @NotNull
+    private Integer age;
+*/
     @NotEmpty
     private String lastName;
 
