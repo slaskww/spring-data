@@ -40,6 +40,12 @@ public class UserController {
         return "users";
     }
 
+    @GetMapping(value = "/user")
+    public String showUsers(Model model){
+        model.addAttribute("users", this.userService.findAll());
+        return "users";
+    }
+
     @PostMapping(value = "/deleteUser")
     public String deleteUser(@RequestParam(required = true) Long id, Model model){
         this.userService.deleteUserById(id);
